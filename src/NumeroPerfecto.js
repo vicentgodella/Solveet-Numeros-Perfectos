@@ -18,7 +18,8 @@ miapp.NumeroPerfecto.prototype.esPerfecto = function(number){
 
 	if(number == sumaDivisores){
 		return true;
-
+	}
+	
 	return false;
 };
 
@@ -32,12 +33,13 @@ miapp.NumeroPerfecto.prototype.getSumaDivisores = function(number){
 	}
 
 	return sumaDivisores;
-}
+};
 
 miapp.NumeroPerfecto.prototype.devuelveMayor = function(number){
 	for(var i = number - 1; i > 0; i--){
-		if(this.esPerfecto(i))
+		if(this.esPerfecto(i)){
 			return i;
+		}
 	}
 
 	return null;
